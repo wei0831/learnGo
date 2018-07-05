@@ -21,15 +21,15 @@ func QuickSort(a []int) {
 	if a == nil {
 		return
 	}
-	qsort(a, 0, len(a)-1)
+	qSort(a, 0, len(a)-1)
 }
 
-func qsort(a []int, low, high int) {
+func qSort(a []int, low, high int) {
 	if low < high {
 		p := partition(a, low, high)
 
-		qsort(a, low, p-1)
-		qsort(a, p+1, high)
+		qSort(a, low, p-1)
+		qSort(a, p+1, high)
 	}
 }
 
